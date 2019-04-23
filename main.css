@@ -1,0 +1,23 @@
+body{
+    margin:0px;
+    padding: 0px;
+}
+
+.bigbox{
+    
+    height: 400px;
+    background-color: rgb(49, 10, 25);
+    transform:translate(0%,40%);
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+    
+}
+.smallbox{
+   width:200px;
+    height: 200px;
+    margin-top:3%;
+    margin-right:3px;
+    background: rgb(241, 205, 211);
+    border-left:3px solid black;
+}
