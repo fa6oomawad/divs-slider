@@ -16,27 +16,49 @@
 <div class='bigbox'>
         <i id="rightarrow"class="fas fa-arrow-circle-right fa-5x"></i>
         <i id="leftarrow" class="fas fa-arrow-circle-left fa-5x"></i>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
-<div class='smallbox'></div>
+<div class='smallbox'>1</div>
+<div class='smallbox'>2</div>
+<div class='smallbox'>3</div>
+<div class='smallbox'>4</div>
+<div class='smallbox'>5</div>
+<div class='smallbox'>6</div>
+<div class='smallbox'>7</div>
+<div class='smallbox'>8</div>
+<div class='smallbox'>9</div>
+<div class='smallbox'>10</div>
+<div class='smallbox'>11</div>
+<div class='smallbox'>12</div>
+<div class='smallbox'>13</div>
+<div class='smallbox'>14</div>
+<div class='smallbox'>15</div>
+<div class='smallbox'>16</div>
 
 </div>
 
 
+<script>
+    const smallboxes=document.querySelectorAll('.smallbox');
+    const rightarrow=document.querySelector('#rightarrow');
+    const leftarrow=document.querySelector('#leftarrow');
 
+    rightarrow.addEventListener('click',function(e){
+console.log(smallboxes);
+smallboxes.forEach((box)=> {
+    box.style.left = box.style.left + 10 + '%'
+    console.log(box.classList)
+})
+
+    })
+    leftarrow.addEventListener('click',function(e){
+
+smallboxes.forEach((box)=> {
+    console.log(box.style.left)
+   box.style.left - 5 
+    
+})
+
+    })
+    </script>
 
 
 </body>

@@ -20,11 +20,15 @@ body{
     margin-right:3px;
     background: rgb(241, 205, 211);
     border-left:3px solid black;
+    position: relative;
+    left:0%;
+    right:0;
 }
 
 #leftarrow,#rightarrow {
     color:rgb(0, 0, 0);
     position: absolute;
+    z-index: 1;
     
 }
 
