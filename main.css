@@ -21,3 +21,18 @@ body{
     background: rgb(241, 205, 211);
     border-left:3px solid black;
 }
+
+#leftarrow,#rightarrow {
+    color:rgb(0, 0, 0);
+    position: absolute;
+    
+}
+
+#leftarrow{
+top:40%;
+}
+
+#rightarrow{
+    left:39%;
+    top:40%;
+}
