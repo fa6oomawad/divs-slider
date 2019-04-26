@@ -37,14 +37,22 @@ padding-bottom: 0;
     color:rgb(0, 0, 0);
     position: absolute;
     z-index: 1;
+    cursor: pointer;
     
 }
-
+#leftarrow:hover{
+    color:rgb(233, 255, 34)
+}
 #leftarrow{
 top:40%;
 }
 
+
 #rightarrow{
     left:39%;
     top:40%;
+}
+#rightarrow:hover{
+    color:rgb(233, 255, 34)
+
 }
