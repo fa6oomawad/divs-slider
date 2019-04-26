@@ -40,27 +40,45 @@
     const smallboxes=document.querySelectorAll('.smallbox');
     const rightarrow=document.querySelector('#rightarrow');
     const leftarrow=document.querySelector('#leftarrow');
+    const bigbox=document.querySelector('.bigbox');
+    //we fetch the first and last box to stop the moving if we reach the last element
+    const bigfirst=bigbox.children[2];
+    const biglast= bigbox.children[17];
+    console.log(biglast)
    
    //intilize the left for all the boxes with zero 
    smallboxes.forEach(box=>{
        box.style.left=0;
    })
-   
+
    
 leftarrow.addEventListener('click',function(e){
-
+  
+        let lastboxpos= parseInt(biglast.style.left);
+       //if the last box appear stop the moving else keep moving the boxes
+    if(lastboxpos<=-60){
+        return ;
+    }
+    else{
 smallboxes.forEach((box)=> {
+    
     //first we fetch the old position
     const oldLeft=parseInt(box.style.left);
     //then we add the new one , here to move to left we substract from the left position
     box.style.left= oldLeft - 10 +'%';
 })
 
-    })
+    }})
 
 
     rightarrow.addEventListener('click',function(e){
-
+        let firstboxpos= parseInt(bigfirst.style.left);
+        console.log(firstboxpos)
+       //if the first box appear stop the moving else keep moving the boxes
+    if(firstboxpos==0){
+        return ;
+    }
+    else{
 smallboxes.forEach((box)=> {
     //first we fetch the old position
     const oldLeft=parseInt(box.style.left);
@@ -68,7 +86,7 @@ smallboxes.forEach((box)=> {
     box.style.left= oldLeft + 10 +'%';
 })
 
-    })
+    }})
 
 
     </script>
