@@ -40,24 +40,37 @@
     const smallboxes=document.querySelectorAll('.smallbox');
     const rightarrow=document.querySelector('#rightarrow');
     const leftarrow=document.querySelector('#leftarrow');
+   
+   //intilize the left for all the boxes with zero 
+   smallboxes.forEach(box=>{
+       box.style.left=0;
+   })
+   
+   
+leftarrow.addEventListener('click',function(e){
+
+smallboxes.forEach((box)=> {
+    //first we fetch the old position
+    const oldLeft=parseInt(box.style.left);
+    //then we add the new one , here to move to left we substract from the left position
+    box.style.left= oldLeft - 10 +'%';
+})
+
+    })
+
 
     rightarrow.addEventListener('click',function(e){
-console.log(smallboxes);
+
 smallboxes.forEach((box)=> {
-    box.style.left = box.style.left + 10 + '%'
-    console.log(box.classList)
+    //first we fetch the old position
+    const oldLeft=parseInt(box.style.left);
+    //then we add the new one , here to move to right we add to the left position
+    box.style.left= oldLeft + 10 +'%';
 })
 
     })
-    leftarrow.addEventListener('click',function(e){
 
-smallboxes.forEach((box)=> {
-    console.log(box.style.left)
-   box.style.left - 5 
-    
-})
 
-    })
     </script>
 
 
