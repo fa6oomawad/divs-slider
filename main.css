@@ -1,6 +1,7 @@
 body{
     margin:0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 
 .bigbox{
@@ -22,7 +23,14 @@ body{
     border-left:3px solid black;
     position: relative;
 left:0;
-transition:0.6s all ;    
+transition:0.6s all ;  
+color:white;
+font-family:Courier;
+font-weight: bold;
+font-size:100px;
+text-align: center;
+
+padding-bottom: 0;
 }
 
 #leftarrow,#rightarrow {
